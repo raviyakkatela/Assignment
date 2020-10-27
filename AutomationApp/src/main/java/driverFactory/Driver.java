@@ -10,7 +10,7 @@ public class Driver {
 	 * To initialize the driver
 	 * 
 	 * @author Ravi Kumar Yakkatela
-	 * @param browserName
+	 * @param browserName 
 	 */
 
 	public static WebDriver createDriver(String browserName) throws Exception {

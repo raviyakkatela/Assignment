@@ -514,3 +514,12 @@ org.eclipse.jdt.core.JavaModelException: target/test-classes/ServiceNow/Automati
 2020-10-25 17:52:40,196 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\yakkr\Documents\Assignment\AutomationApp\src\main\resources
 2020-10-25 17:52:40,197 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-10-25 17:52:40,197 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\yakkr\Documents\Assignment\AutomationApp\src\test\resources
+2020-10-27 13:50:57,816 [Worker-3] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-10-27 13:54:31,459 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-27 13:54:31,460 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\yakkr\Documents\Assignment\AutomationApp\src\main\resources
+2020-10-27 13:54:31,463 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-27 13:54:31,463 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\yakkr\Documents\Assignment\AutomationApp\src\test\resources
+2020-10-27 13:58:38,670 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-27 13:58:38,672 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\yakkr\Documents\Assignment\AutomationApp\src\main\resources
+2020-10-27 13:58:38,679 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-10-27 13:58:38,680 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\yakkr\Documents\Assignment\AutomationApp\src\test\resources
