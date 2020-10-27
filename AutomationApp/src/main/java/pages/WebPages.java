@@ -1,0 +1,44 @@
+package pages;
+
+import org.openqa.selenium.By;
+
+/**
+ * Contains all page elements
+ * 
+ * @author Ravi Kumar Yakkatela
+ */
+
+public interface WebPages {
+
+	//Sign section
+	By SIGNINHEADER_BUTTON = By.xpath("//*[@class='login']");
+	By USERNAME = By.xpath("//*[@id='email']");
+	By PASSWORD = By.xpath("//*[@id='passwd']");
+	By SIGNIN_BUTTON = By.xpath("//*[@id='SubmitLogin']");
+
+	//Search and sort the products
+	By GLOBALSEARCH_TEXTBOX = By.xpath("//*[@id='search_query_top']");
+	By GLOBALSEARCH__LINK = By.xpath("//*[@name='submit_search']");
+	By SORTBY_SELECT = By.xpath("//*[@id='selectProductSort']");
+	By PRODUCTLIST = By.xpath("//*[@class='product_list grid row']/li[1]");
+
+	//Add to cart,checkout and payment
+	By ADDTOCART_BUTTON = By.xpath("//*[@id='add_to_cart']");
+	By CHECKOUT_BUTTON = By.xpath("//*[@title='Proceed to checkout']");
+	By CHECKOUT_BUTTON_CART_SUMMARY = By.xpath("//*[@class='cart_navigation clearfix']//*[@title='Proceed to checkout']");
+	By CHECKOUT_BUTTON_CART_ADDRESS = By.xpath("//*[@name='processAddress']");
+	By CHECKOUT_BUTTON_CART_SHIPPING = By.xpath("//*[@name='processCarrier']");
+	By TERMS_CHECKBOX = By.xpath("//*[@id='cgv']");
+	By PAYBYCHECK = By.xpath("//*[@title='Pay by check.']");
+	By CONFIRMORDER_BUTTON = By.xpath("//*[@type='submit']//*[text()='I confirm my order']");
+	By SUCCESSMESSAGE = By.xpath("//*[@class='alert alert-success']");
+	By SIGNOUT = By.xpath("//*[@title='Log me out']");
+
+	public void login(String username, String pwd);
+	public void enterSerachCriteria(String keyword);
+	public void selectSortBy(String keyword);
+	public void addItemToCart();
+	public void checkoutAndPayment();
+	public void loggoffAndCloseBrowser();
+
+}

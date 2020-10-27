@@ -1,0 +1,34 @@
+package DriverFactory;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Driver {
+	
+	public static WebDriver driver = null;
+ public static WebDriver createDriver(String browserName) throws Exception {
+	        switch(browserName) {
+	        case "firefox":
+	            // code to system props and instantiate the driver
+	            break;
+	        case "chrome":
+	        	System.setProperty("webdriver.chrome.driver", "C:\\Users\\yakkr\\Downloads\\chromedriver_win32\\chromedriver.exe");  
+ 	             driver=new ChromeDriver(); 
+	            break;
+	        case "ibrowser":
+	            // code to system props and instantiate the driver
+	            break;
+	        case "edge":
+	            // code to system props and instantiate the driver
+	            break;
+	        case "safari":
+	            // code to system props and instantiate the driver
+	            break;
+	        default:
+	            throw new Exception("Unsupported browser: " + browserName);
+	        }
+	    return driver;
+	
+	}
+
+}

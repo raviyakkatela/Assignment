@@ -1,0 +1,27 @@
+package DriverFactory;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Driver {
+	public static WebDriver driver = null;
+
+	/**
+	 * To initialize the driver
+	 * 
+	 * @author Ravi Kumar Yakkatela
+	 * @param browserName
+	 */
+
+	public static WebDriver createDriver(String browserName) throws Exception {
+		switch (browserName) {
+		case "chrome":
+			System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe"); // Change the location chrome driver if needed
+			driver = new ChromeDriver();
+			break;
+		default:
+			throw new Exception("Unsupported browser: " + browserName);
+		}
+		return driver;
+	}
+}

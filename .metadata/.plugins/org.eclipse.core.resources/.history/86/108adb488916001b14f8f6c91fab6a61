@@ -1,0 +1,96 @@
+package pages.Impl;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import DriverFactory.Driver;
+import pages.HomeScreen;
+
+public class HomeScreenImpl extends Driver implements HomeScreen {
+
+	/**
+	 * To login into application with username and password
+	 * 
+	 * @author Ravi Kumar Yakkatela
+	 * @param username, pwd
+	 */
+
+	public void login(String username, String pwd) {
+		driver.findElement(SIGNINHEADER_BUTTON).click();
+		driver.findElement(USERNAME).sendKeys(username);
+		driver.findElement(PASSWORD).sendKeys(pwd);
+		driver.findElement(SIGNIN_BUTTON).click();
+	}
+
+	/**
+	 * 	To search for keyword in global search
+	 * 
+	 * @author Ravi Kumar Yakkatela
+	 * @param keyword
+	 */
+
+	public void enterSerachCriteria(String keyword) {
+		driver.findElement(GLOBALSEARCH_TEXTBOX).sendKeys(keyword);
+		driver.findElement(GLOBALSEARCH__LINK).click();
+	}
+
+	/**
+	 * @Purpose To sort the products based on lowest price
+	 * 
+	 * @author Ravi Kumar Yakkatela
+	 * @param Lowest price
+	 */
+
+	public void selectSortBy(String price) {
+		Select sortBy = new Select(driver.findElement(SORTBY_SELECT));
+		if (price.equalsIgnoreCase("lowest")) {
+			sortBy.selectByVisibleText("Price: Lowest first");
+		}
+	}
+
+	/**
+	 * 	To add the selected product to the cart
+	 * 
+	 * @author Ravi Kumar Yakkatela
+	 * 
+	 */
+
+	public void addItemToCart() {
+		Actions actions = new Actions(driver);
+		WebElement item = driver.findElement(PRODUCTLIST);
+		actions.moveToElement(item);
+		actions.click().build().perform();
+		driver.findElement(ADDTOCART_BUTTON).click();
+	}
+
+	/**
+	 * @author Ravi Kumar Yakkatela
+	 * @Purpose To checkout and payment the added product and complete the
+	 *          transaction
+	 * 
+	 */
+	public void checkoutAndPayment() {
+		driver.findElement(CHECKOUT_BUTTON).click();
+		driver.findElement(CHECKOUT_BUTTON_CART_SUMMARY).click();
+		driver.findElement(CHECKOUT_BUTTON_CART_ADDRESS).click();
+		driver.findElement(TERMS_CHECKBOX).click();
+		driver.findElement(CHECKOUT_BUTTON_CART_SHIPPING).click();
+		driver.findElement(PAYBYCHECK).click();
+		driver.findElement(CONFIRMORDER_BUTTON).click();
+		String msg = driver.findElement(SUCCESSMESSAGE).getText();
+		Assert.assertEquals("Your order on My Store is complete.", msg);
+	}
+
+	/**
+	 * @author Ravi Kumar Yakkatela
+	 * @Purpose Signout and close the browser
+	 * 
+	 */
+
+	public void loggoffAndCloseBrowser() {
+		driver.findElement(SIGNOUT).click();
+		driver.close();
+	}
+
+}

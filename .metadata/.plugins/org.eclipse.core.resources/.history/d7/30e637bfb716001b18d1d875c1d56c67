@@ -1,0 +1,24 @@
+Project:
+
+		An ecommerce website labelled "http://automationpractice.com" which deals mainly with clothing of different brands.
+		This project is to verify user is able to search for a criteria and able to select the item and he/she able to check out the item and complete the transaction.	
+		
+ 
+Scenario: 
+
+		Verify user is able to select the lowest price item and able to checkout and complete the transaction process. 
+ 
+  
+Design: 
+
+		To  
+ 
+  		
+Prerequisites: 
+
+		To run this project, User should download the required jars listed below and configure the build path to the project.
+		
+		Chromdriver.exe  -> Modify the path of chromdriverin "createDriver" method of class "Driver".
+		Selenium-server-standalone jar
+		Junit 
+		Cucumber required jars
